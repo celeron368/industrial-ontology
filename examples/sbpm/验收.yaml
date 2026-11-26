@@ -1,0 +1,16 @@
+用例:
+  - 名称: 由进程的运行位置推得 CPU 承载该进程
+    三元组: [[entity, CPU板01], hosts, [entity, 板卡控制进程01]]
+    预期: 推得
+  - 名称: 由 IOC 清单反查触发延时的发布者
+    三元组: [[pv, "SBPM01:TRIG:DELAY"], publishedBy, [entity, 板卡控制进程01]]
+    预期: 推得
+  - 名称: 探头端口经探头隶属于束测单元
+    三元组: [[port, SBPM探头01, OUT1], partOf, [entity, 束测单元01]]
+    预期: 推得
+  - 名称: 文档中的 FFT 带宽对应整卡 PV
+    三元组: [[quantity, 采集卡01, FFT带宽], boundPV, [pv, "SBPM01:FFT:BW"]]
+    预期: 存在
+  - 名称: 单板触发延时不会被当作波形读出
+    三元组: [[quantity, 采集卡01, 实时波形], boundPV, [pv, "SBPM01:TRIG:DELAY"]]
+    预期: 未导出
