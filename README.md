@@ -18,4 +18,4 @@ python scripts/ontology.py compile examples/sbpm/束测机箱-物理.yaml -o bui
 python scripts/ontology.py verify build/device.owl --tests examples/sbpm/验收.yaml
 ```
 
-[技能入口](SKILL.md) · [建模与检查规则](references/rules.md)
+[技能入口](SKILL.md) · [本体构建约束总表](CONSTRAINTS.md)
